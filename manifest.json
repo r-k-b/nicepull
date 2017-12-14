@@ -1,0 +1,18 @@
+{
+
+    "manifest_version": 2,
+    "name": "Nice Pull",
+    "version": "1.0",
+
+    "description": "Gives GitHub PR commits nice default names.",
+
+    "icons": {
+        "48": "icons/border-48.png"
+    },
+
+    "content_scripts": [{
+        "matches": ["*://github.com/*/pull/*"],
+        "js": ["nicepull.js"]
+    }]
+
+}
