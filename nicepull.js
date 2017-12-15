@@ -4,12 +4,18 @@ const regex = /(.*):\/\/github.com\/(.*)\/pull\/([0-9]+)/
 const result = regex.exec(url);
 const prNum = result[3];
 
-console.log(url);
-console.log(result);
+function fixMessage() {
+    const mergeTitle = document.getElementById('merge_title_field');
+    const mergeBody = document.getElementById('merge_message_field');
 
-const mergeTitle = document.getElementById('merge_title_field');
-const mergeBody = document.getElementById('merge_message_field');
+    if (!mergeTitle || !mergeBody) {
+        setTimeout(timeOut, 1000);
+        return;
+    }
 
-const newTitle = `${mergeBody.value} (#${prNum})`;
-mergeTitle.value = newTitle;
-mergeBody.value = '';
+    const newTitle = `${mergeBody.value} (#${prNum})`;
+    mergeTitle.value = newTitle;
+    mergeBody.value = '';
+}
+
+fixMessage();
