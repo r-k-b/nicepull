@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "Nice Pull",
-    "version": "1.1",
+    "version": "1.2",
 
     "description": "Gives GitHub PR commits nice default names.",
 
