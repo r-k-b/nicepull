@@ -9,7 +9,11 @@ function fixMessage() {
     const mergeBody = document.getElementById('merge_message_field');
 
     if (!mergeTitle || !mergeBody) {
-        setTimeout(timeOut, 1000);
+        setTimeout(fixMessage, 1000);
+        return;
+    }
+
+    if (!mergeBody.value) {
         return;
     }
 
